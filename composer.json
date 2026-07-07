@@ -1,0 +1,36 @@
+{
+    "name": "cybersec/laravel-shield",
+    "description": "A comprehensive cybersecurity package for Laravel providing Identity Management, Zero Trust, SIEM, Endpoint Security, and more.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laravel Developer",
+            "email": "developer@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0",
+        "illuminate/contracts": "^10.0|^11.0",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "CyberSec\\Shield\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CyberSec\\Shield\\CyberShieldServiceProvider"
+            ],
+            "aliases": {
+                "CyberShield": "CyberSec\\Shield\\Facades\\CyberShield"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
